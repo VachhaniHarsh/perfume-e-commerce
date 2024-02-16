@@ -9,4 +9,9 @@ const product = require("./routes/productRoute");
 
 app.use("/api/v1", product);
 
+//Middleware for error
+const errorMiddleware = require("./middelware/error");
+
+app.use(errorMiddleware);
+
 module.exports = app;
