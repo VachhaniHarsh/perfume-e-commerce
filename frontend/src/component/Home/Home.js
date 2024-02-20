@@ -5,25 +5,30 @@ import Product from "./Product.js";
 import MetaData from "../layout/MetaData.js";
 import { getProduct } from "../../actions/productAction.js";
 import { useSelector, useDispatch } from "react-redux";
+import Loader from "../layout/Loader/Loader.js";
+import { useAlert } from 'react-alert';
 
-
-const product = {
-  name:"PDM Greenley",
-  price: "₹ 3333",
-  _id: "dummyProduct",
-  images: [{ url:"https://www.maxaroma.com/images/product-story/story-images/UP3700578500861_two.png?verP=1671478563"}],
-} 
 
 const Home = () => {
+
+  const alert = useAlert();
+
   const dispatch = useDispatch();
   const {loading,error,products,productsCount} = useSelector((state)=>state.products);
 
   useEffect(() => {
+
+    if (error) {
+      return alert.error(error);
+    }
+
     dispatch(getProduct());
-  }, [dispatch]);
+  }, [dispatch,error,alert]);
 
   return (
     <Fragment>
+      {loading ? (<Loader/>) : (
+        <Fragment>
 
       <MetaData title="OdeurX"></MetaData>
 
@@ -51,7 +56,12 @@ const Home = () => {
       </div>
       
     </Fragment>
+      )}
+    </Fragment>
   )
 };
 
 export default Home;
+
+
+    
