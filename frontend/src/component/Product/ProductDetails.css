@@ -1,5 +1,7 @@
+
 .ProductDetails {
     background-color: rgba(28, 101, 175, 0.584);
+    /* background-color: white; */
     width: 100vw;
     max-width: 100%;
     padding: 6vmax;
@@ -44,13 +46,13 @@
     align-items: center;
     border-top: 1px solid rgba(0, 0, 0, 0.205);
     border-bottom: 1px solid rgba(0, 0, 0, 0.205);
-    width: 70%;
+    width: 80%;
     padding: 1vmax 0;
 }
 
 .detailsBlock-2-span {
     font: 200 0.8vmax cursive;
-    color: rgba(0, 0, 0, 0.699);
+    color: rgba(0, 0, 0, 0.699);    
 }
 
 .detailsBlock-3 {
@@ -86,10 +88,12 @@
     border: none;
     padding: 0.5vmax;
     width: 1vmax;
-    text-align: center;
     outline: none;
     font: 400 0.8vmax ;
     color: rgba(0, 0, 0, 0.74);
+    align-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
 }
 
 .detailsBlock-3-1>button:last-child {
@@ -145,6 +149,61 @@
     background-color: rgb(197, 68, 45);
     transform: scale(1.1);
 }
+
+.allReviews{
+    background-color: rgba(28, 101, 175, 0.584);
+    /* background-color: white; */
+}
+
+.reviewsHeading {
+    color: #000000be;
+    font: 500 1.4vmax;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.226);
+    padding: 1vmax;
+    width: 20vmax;
+    margin: auto;
+    margin-bottom: 4vmax;
+}
+
+.reviews {
+    display: flex;
+    overflow: auto;
+}
+
+.reviewCard {
+    flex: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.226);
+    border: 1px solid rgba(56, 56, 56, 0.116);
+    width: 30vmax;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1vmax;
+    padding: 3vmax;
+}
+
+.reviewCard>img {
+    width: 5vmax;
+}
+
+.reviewCard>p {
+    color: rgba(0, 0, 0, 0.836);
+    font: 600 0.9vmax;
+}
+
+.reviewCardComment {
+    color: rgba(0, 0, 0, 0.445);
+    font: 300 0.8vmax cursive;
+}
+
+.noReviews {
+    font: 400 1.3vmax "Gill Sans";
+    text-align: center;
+    color: rgba(0, 0, 0, 0.548);
+}
+
+
 
 @media screen and (max-width: 600px) {
     .ProductDetails {

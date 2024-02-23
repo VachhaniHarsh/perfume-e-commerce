@@ -17,12 +17,12 @@ const Header = () => {
             link1Text="Home"
             link2Text="Products"
             link3Text="Contact"
-            link4Text="About"
+            link4Text="Search Products 🔎"
 
             link1Url="/"
-            link2Url="/product"
+            link2Url="/products"
             linke3Url="/contact"
-            link4Url="/about"
+            link4Url="/search"
 
             link1Margin="1vmax"
             link2Margin="1vmax"
@@ -37,6 +37,8 @@ const Header = () => {
             nav2justifyContent="flex-end"
             nav3justifyContent="flex-start"
             nav4justifyContent="flex-start"
+
+            logoTransition="0.3"
         />
   )
 }
